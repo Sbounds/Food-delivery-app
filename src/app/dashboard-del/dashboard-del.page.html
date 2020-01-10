@@ -1,0 +1,67 @@
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="openFirst()">
+          <ion-icon fill="icon-only" name="menu">
+
+          </ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title text-center>Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <ion-label> Current Orders</ion-label>
+  <div *ngFor = "let co of curOrders">
+      <ion-card>
+          <ion-grid>
+            <ion-card-header>
+            <ion-row>
+              <ion-col text-left>Delivery Address</ion-col>
+              <ion-col text-left>Restuarant Address</ion-col>
+            </ion-row>
+          </ion-card-header>
+            <ion-row>
+              <ion-col>
+                  <app-del-cart [cID]=co.cart_id></app-del-cart>
+              </ion-col>
+              <ion-col>
+                  <app-del-res-add-comp [resID]=co.res_id></app-del-res-add-comp>
+              </ion-col>
+            </ion-row>
+          <ion-row>
+              <ion-button (click)="delivered(co.cart_id)">Delivered</ion-button>
+        </ion-row>
+        </ion-grid>
+        </ion-card>
+    
+  </div>
+  <br>
+  <ion-label>Available Orders</ion-label>
+  <div *ngFor = "let ao of availOrders">
+    <ion-card>
+    <ion-grid>
+      <ion-card-header>
+      <ion-row>
+        <ion-col>Delivery Address</ion-col>
+        <ion-col>Restuarant Address</ion-col>
+      </ion-row>
+    </ion-card-header>
+      <ion-row>
+        <ion-col>
+            <app-del-cart [cID]=ao.cart_id></app-del-cart>
+        </ion-col>
+        <ion-col>
+            <app-del-res-add-comp [resID]=ao.res_id></app-del-res-add-comp>
+        </ion-col>
+      </ion-row>
+    <ion-row>
+    <ion-button (click)="accept(ao.cart_id)">Accept Order</ion-button>
+  </ion-row>
+  </ion-grid>
+  </ion-card>
+  </div>
+</ion-content>
+

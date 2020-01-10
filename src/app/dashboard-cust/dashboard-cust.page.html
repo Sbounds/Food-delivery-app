@@ -1,0 +1,56 @@
+<ion-header text-center>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="openFirst()">
+          <ion-icon fill="icon-only" name="menu">
+          </ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <table>
+          <tr>
+            <td><ion-title><b><i>Restaurants</i></b></ion-title></td>
+            <td><ion-img src="../assets/icon/oxford2go.png"></ion-img></td>
+          </tr>
+        </table>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+ 
+<!--<ion-button (click)="presentModal()">Present Modal</ion-button>--->
+
+<!--<div padding>
+
+  <ion-button shape = "round" expand = "full" size = "large" (click) = "aToEAlpha()">A-E</ion-button>
+  <ion-button shape = "round" expand = "full" size = "large" (click) = "fToLAlpha()">F-L</ion-button>
+  <ion-button shape = "round" expand = "full" size = "large" (click) = "mToSAlpha()">M-S</ion-button>
+  <ion-button shape = "round" expand = "full" size = "large" (click) = "tToZAlpha()">T-Z</ion-button>
+</div>
+-->
+
+<ion-searchbar (ionChange)="getItems($event)"></ion-searchbar>
+<div *ngFor = "let rs of rsl">
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title text-center>{{ rs.resturantName }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!--<div text-center>
+        <ion-label text-center> cuisine type</ion-label>
+        </div>-->
+        <div text-center>
+       <ion-label text-center> {{rs.description}}</ion-label>
+      </div>
+      <div text-center> 
+      <ion-button  (click)="viewResturant(rs)" >Open Menu</ion-button>
+    </div> 
+    </ion-card-content>
+    </ion-card>
+  
+</div>
+
+
+</ion-content>
+
+

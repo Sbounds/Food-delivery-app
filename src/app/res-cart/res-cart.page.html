@@ -1,0 +1,43 @@
+<ion-header>
+   
+     
+         
+        
+   <!--- <ion-img  src="../assets/icon/oxford2go.png" class ='img'  ></ion-img>-->
+    <ion-toolbar>
+       <ion-title text-center> Current Orders </ion-title>
+      
+   
+        <ion-buttons class= buttons slot="start">
+          <ion-button class= buttons (click)="openFirst()">
+            <ion-icon fill="icon-only" name="menu">                 
+
+            </ion-icon>
+          </ion-button>
+        </ion-buttons>
+           
+              
+            
+          
+      </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor = "let c of resCart">
+   <ion-label text-center> <app-res-cart-comp [cID]=c.cart_id></app-res-cart-comp> </ion-label>
+   <ion-grid>
+    <ion-row>
+      <ion-col text-left>
+          <ion-button class = 'buttona' (click)="accept(c.cart_id)">Accept Cart</ion-button>
+      </ion-col>
+   <ion-col text-center>
+      <ion-button class = 'buttor'(click)="reject(c.cart_id)">Reject Cart</ion-button>
+  </ion-col>
+    </ion-row>
+    </ion-grid> 
+   
+    
+
+  </div>
+
+</ion-content>

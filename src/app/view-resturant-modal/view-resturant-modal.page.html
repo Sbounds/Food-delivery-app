@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ resturant.resturantName }}</ion-title>
+    <div text-right>
+        <ion-button color = "danger" (click)="dismiss()">X</ion-button>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor = "let mi of menItems">
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>{{ mi.item_name }}</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Price: {{mi.item_price}}
+            <br>
+            Description: {{mi.item_description}}
+            <br>
+            <ion-button (click)="addToCart(mi)" size = "small">Add To Cart</ion-button>
+          </ion-card-content>
+        </ion-card>
+      
+  </div>
+
+</ion-content>

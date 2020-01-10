@@ -1,0 +1,133 @@
+  <ion-header>
+    <ion-toolbar>
+       <ion-buttons slot="start">
+            <ion-button (click)="openFirst()">
+              <ion-icon fill="icon-only" name="menu">                 
+
+              </ion-icon>
+            </ion-button>
+          </ion-buttons>
+      <ion-title text-center>Profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content padding>
+    <!--need to seperate for different users-->
+   
+    <div *ngIf="this.user_type=='0'">
+    <ion-item>
+        <ion-label text-left>First Name: </ion-label>
+        <ion-input type = "text" [(ngModel)]="user_firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label text-left>Last Name: </ion-label>
+        <ion-input type = "text" [(ngModel)]="user_lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label text-left>Phone Number: </ion-label>
+        <ion-input type = "text" [(ngModel)]="contactNumber"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label text-left>Street Address: </ion-label>
+          <ion-input type = "text" [(ngModel)]="streetAddress"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label text-left>City: </ion-label>
+          <ion-input type = "text" [(ngModel)]="city"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label text-left>State: </ion-label>
+          <ion-input type = "text" [(ngModel)]="state"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label text-left>Zipcode: </ion-label>
+          <ion-input type = "text" [(ngModel)]="zip"></ion-input>
+        </ion-item>
+        <div>
+        <ion-button (click) = "updateUser()" color = "success">Update Profile</ion-button>
+       </div>
+      <div>
+        <ion-button (click) = "updatePassword()" color = "success">Update Password</ion-button>
+      </div>
+      </div>
+
+      <div *ngIf="this.user_type=='1'">
+        <ion-header>Personal Information</ion-header>
+        <ion-item>
+            <ion-label text-left>First Name: </ion-label>
+            <ion-input type = "text" [(ngModel)]="user_firstName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label text-left>Last Name: </ion-label>
+            <ion-input type = "text" [(ngModel)]="user_lastName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label text-left>Phone Number: </ion-label>
+            <ion-input type = "text" [(ngModel)]="contactNumber"></ion-input>
+          </ion-item>
+          <div>
+          <ion-button (click) = "updateUser()" color = "success">Update Profile</ion-button>
+       </div>
+          <br>
+          <ion-header>Resturant Information</ion-header>
+          <ion-item>
+              <ion-label text-left>Resturant Name: </ion-label>
+              <ion-input type = "text" [(ngModel)]="resturantName"></ion-input>
+            </ion-item>
+          <ion-item>
+              <ion-label text-left>Phone Number: </ion-label>
+              <ion-input type = "text" [(ngModel)]="resContactNumber"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label text-left>Street Address: </ion-label>
+                <ion-input type = "text" [(ngModel)]="streetAddress"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label text-left>City: </ion-label>
+                <ion-input type = "text" [(ngModel)]="city"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label text-left>State: </ion-label>
+                <ion-input type = "text" [(ngModel)]="state"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label text-left>Zipcode: </ion-label>
+                <ion-input type = "text" [(ngModel)]="zip"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label text-left>Description: </ion-label>
+                <ion-input type = "text" [(ngModel)]="description"></ion-input>
+              </ion-item>
+              
+              <div>
+              <ion-button (click) = "updateRes()" color = "success">Update Resturant</ion-button>
+            </div>
+            <div>
+              <ion-button (click) = "updatePassword()" color = "success">Update Password</ion-button>
+            </div>
+          </div>
+
+         <div *ngIf="this.user_type=='2'">
+          <ion-item>
+            <ion-label text-left>First Name: </ion-label>
+            <ion-input type = "text" [(ngModel)]="user_firstName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label text-left>Last Name: </ion-label>
+            <ion-input type = "text" [(ngModel)]="user_lastName"></ion-input>
+          </ion-item>
+
+            <div>
+            <ion-button (click) = "updateUser()" color = "success">Update Profile</ion-button>
+            </div>
+            <div>
+              <ion-button (click) = "updatePassword()" color = "success">Update Password</ion-button>
+            </div>
+          </div>
+   
+      
+      
+      <!--TODO: need to allow for individuals to update their password through firebase-->
+     
+  </ion-content>
+
+

@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Check Out</ion-title>
+    <div text-right>
+        <ion-button color = "danger" (click)="dismiss()">X</ion-button>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    Payment Info:
+        <ion-item>
+            <ion-label text-left>Card Number: </ion-label>
+            <ion-input type = "text" [(ngModel)]="cardnum"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label text-left>CSV: </ion-label>
+              <ion-input type = "text" [(ngModel)]="cardcsv"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label text-left>Expiration Date: </ion-label>
+                <ion-input type = "text" [(ngModel)]="cardexp"></ion-input>
+              </ion-item>
+              Billing Address:
+              <ion-item>
+                  <ion-label text-left>First Name: </ion-label>
+                  <ion-input type = "text" [(ngModel)]="cardfname"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label text-left>Last Name: </ion-label>
+                    <ion-input type = "text" [(ngModel)]="cardlname"></ion-input>
+                  </ion-item>
+              <ion-item>
+                  <ion-label text-left>Street Address: </ion-label>
+                  <ion-input type = "text" [(ngModel)]="cardstreet"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label text-left>City: </ion-label>
+                    <ion-input type = "text" [(ngModel)]="cardcity"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label text-left>State: </ion-label>
+                      <ion-input type = "text" [(ngModel)]="cardstate"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label text-left>Zipcode: </ion-label>
+                        <ion-input type = "text" [(ngModel)]="cardzip"></ion-input>
+                      </ion-item>
+    
+    Delivery Info:
+    <ion-item>
+        <ion-label text-left>First Name: </ion-label>
+        <ion-input type = "text" [(ngModel)]="user_firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label text-left>Last Name: </ion-label>
+        <ion-input type = "text" [(ngModel)]="user_lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label text-left>Phone Number: </ion-label>
+        <ion-input type = "text" [(ngModel)]="contactNumber"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label text-left>Street Address: </ion-label>
+          <ion-input type = "text" [(ngModel)]="streetAddress"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label text-left>City: </ion-label>
+          <ion-input type = "text" [(ngModel)]="city"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label text-left>State: </ion-label>
+          <ion-input type = "text" [(ngModel)]="state"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label text-left>Zipcode: </ion-label>
+            <ion-input type = "text" [(ngModel)]="zipcode"></ion-input>
+          </ion-item>
+
+
+          <ion-button (click)="submit()">Submit</ion-button>
+          
+        
+
+</ion-content>

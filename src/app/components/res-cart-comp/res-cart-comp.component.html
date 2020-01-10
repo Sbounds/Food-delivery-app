@@ -1,0 +1,18 @@
+
+{{ list }}
+<div *ngFor= "let i of list">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-label class = 'name'> {{i.item_name}}</ion-label>
+      </ion-col>
+      <ion-col>
+          <ion-label class="qty">{{i.item_qty}}</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+  <!--add in special instructions-->
+  
+ 
+</div>

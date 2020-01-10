@@ -1,0 +1,29 @@
+{{ list }}
+  <div *ngFor= "let i of list">
+    <!--{{i.item_name}}-->
+    <ion-grid>
+    <ion-row>
+          <ion-col >
+            {{i.item_name}}
+          </ion-col>
+          <ion-col >
+            {{i.item_qty}}
+          </ion-col>
+          <ion-col>
+            <ion-button (click)="increase(i.item_id, i.item_qty)" class ="btn">+</ion-button>
+            <ion-button (click)="decrease(i.item_id, i.item_qty)" class ="btn">-</ion-button>
+          </ion-col>
+          <ion-col>
+              {{i.item_price*i.item_qty}}
+          </ion-col>
+          <ion-col>
+              <ion-button (click) = "delete(i.item_id)"class ="btn1" >x</ion-button>
+          </ion-col>
+      </ion-row>
+    
+   
+  </ion-grid>
+  </div>
+
+
+

@@ -1,0 +1,27 @@
+ion-title{
+    position: relative;
+    text-align: center;
+}
+
+ion-content {
+    --ion-background-color: rgb(243, 243, 243);
+}
+
+ion-img {
+    height: 45px;
+    width: auto;
+}
+
+ion-card{
+    background-color: #ffffff;
+}
+
+
+.name{
+    text-align: left;
+    font-size: 40px;
+}
+    ion-grid{
+    --ion-grid-columns: 6;
+    --ion-grid-padding: 8px;
+}

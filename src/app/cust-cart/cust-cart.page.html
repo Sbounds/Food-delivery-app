@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-button (click)="openFirst()">
+          <ion-icon fill="icon-only" name="menu">
+          </ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <table>
+          <tr>
+            <td><ion-title><b><i>Shopping Cart</i></b></ion-title></td>
+            <td><ion-img src="../assets/icon/oxford2go.png"></ion-img></td>
+          </tr>
+        </table>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor = "let c of cart">
+    <ion-card>
+    
+         
+    
+      <ion-card-content text-center>
+          <app-res-comp class='name'[resID]=c.res_id></app-res-comp>
+       <ion-grid text-center> 
+          <ion-row>
+              <ion-col>Name</ion-col>
+              <ion-col>
+              </ion-col>
+              <ion-col>Qty</ion-col>
+              <ion-col></ion-col>
+              <ion-col>
+                  Price
+              </ion-col>
+              <ion-col>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+        <app-cart-comp [cID]=c.cart_id></app-cart-comp>
+        <app-cart-total text-center [cID]=c.cart_id></app-cart-total>
+        </ion-card-content>
+    </ion-card>
+    <br>
+    
+  </div>
+
+</ion-content>

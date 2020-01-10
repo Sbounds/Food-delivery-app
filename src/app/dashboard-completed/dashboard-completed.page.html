@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="openFirst()">
+            <ion-icon fill="icon-only" name="menu">
+  
+            </ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-title text-center>Completed Orders</ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-label> Completed Orders</ion-label>
+    <div *ngFor = "let c of compOrders">
+        <ion-card>
+            <ion-grid>
+              <ion-card-header>
+              <ion-row>
+                <ion-col text-left>Delivery Address</ion-col>
+                <ion-col text-left>Restuarant Address</ion-col>
+              </ion-row>
+            </ion-card-header>
+              <ion-row>
+                <ion-col>
+                    <app-del-cart [cID]=c.cart_id></app-del-cart>
+                </ion-col>
+                <ion-col>
+                    <app-del-res-add-comp [resID]=c.res_id></app-del-res-add-comp>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+          </ion-card>
+      
+    </div>
+</ion-content>

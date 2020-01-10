@@ -1,0 +1,69 @@
+
+    <ion-menu menuId="cmenu">
+        <ion-toolbar>
+          <ion-title text-center>Menu</ion-title>
+        </ion-toolbar>
+        <ion-content>
+            <ion-button expand = 'block' href="/dashboard-cust" routerDirection="forward">Home</ion-button> 
+            <ion-button expand = 'block' href="/cust-cart" routerDirection="forward">Shopping Cart</ion-button> 
+            <ion-button expand = 'block' href="/cus-history" routerDirection="forward">History</ion-button> 
+            <ion-button expand = 'block' href="/profile" routerDirection="forward">Profile</ion-button> 
+        <ion-button expand = 'block' (click)= "logout()" href="/login" routerDirection="forward">Logout</ion-button> 
+      </ion-content>
+    </ion-menu>
+   
+   
+    <ion-menu menuId="dmenu" >
+       
+       
+          <ion-toolbar>
+              <ion-title text-center>Menu</ion-title>
+          </ion-toolbar>
+          <ion-content>
+              <ion-button expand = 'block' href="/dashboard-del" routerDirection="forward">Home</ion-button>
+              <ion-button expand = 'block' href="/dashboard-completed" routerDirection="forward">Completed Orders</ion-button> 
+            <ion-button expand = 'block' href="/profile" routerDirection="forward">Profile</ion-button> 
+          <ion-button expand = 'block' href="/login" routerDirection="forward">Logout</ion-button> 
+        </ion-content>
+      </ion-menu>
+     
+
+
+      <ion-menu menuId="rmenu" >
+            <ion-toolbar>
+                <ion-title text-center>Menu</ion-title>
+            </ion-toolbar>
+            <ion-content>
+               <ion-button expand = 'block' href="/dashboard-res" routerDirection="forward">Home</ion-button> 
+               <ion-button expand = 'block' href="/" routerDirection="forward">Data Analytics</ion-button> 
+               <ion-button expand = 'block' href="/res-cart" routerDirection="forward">Current Carts</ion-button>
+               <ion-button expand = 'block' href="/res-history" routerDirection="forward">History</ion-button> 
+               <ion-button expand = 'block' href="/profile" routerDirection="forward">Profile</ion-button>
+               <ion-button expand = 'block' href="/login" routerDirection="forward">Logout</ion-button> 
+          </ion-content>
+       
+        </ion-menu>
+       
+    
+
+         
+      
+    
+    
+    
+    
+    <!-- The place where the content pages will be rendered -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <ion-router-outlet main ></ion-router-outlet>
+   
+  
+  
